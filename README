@@ -1,0 +1,14 @@
+When using domain mapping with Wordpress every single page view is doing
+a domain mapping within the database. We have atleast two (2) database
+queries for every page request.
+
+As domain mapping probably never ever will change in your site installation 
+this information from db could be cached. I use a cache time for 14 days in
+my modification, but you could probably set it to a year.
+
+If you use this modification I recommend you to mount /tmp in RAM (tmpfs) as 
+there will be a lot of reading from those files ;)
+
+Have a lot of fun!
+Jonas Bjork, jonas.bjork@aller.se, 2011-05-13
+
